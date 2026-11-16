@@ -1,0 +1,25 @@
+Test 6 - Mikulowa jako ograniczenie importu w godzinach skokow (1.10-8.11.2026, bez 9-10.11)
+uruchomiono: 2026-11-16 21:39
+godzin z cena: 937, skokow (> 1000 zl/MWh): 239, pozostalych: 698
+rekordow JAO shadowPrices: 16479, pokrycie godzin danymi JAO: 92.7%
+
+Mikulowa (prog)
+  aktywna w godzinach skokow: 49.4% (118 z 239)
+  aktywna w pozostalych:      7.2% (50 z 698)
+  stosunek: 6.89
+  max shadow price: 1723.5 EUR/MW
+
+SwePol import (kontekst)
+  aktywna w godzinach skokow: 3.8% (9 z 239)
+  aktywna w pozostalych:      6.4% (45 z 698)
+  stosunek: 0.58
+  max shadow price: 1510.7 EUR/MW
+
+Ensdorf - Vigy (kontekst)
+  aktywna w godzinach skokow: 10.5% (25 z 239)
+  aktywna w pozostalych:      0.3% (2 z 698)
+  stosunek: 36.51
+  max shadow price: 1396.5 EUR/MW
+
+WERDYKT (Mikulowa, prog 2x): SYGNAL
+elementy uznane za Mikulowa: Mikulowa PST1 , Mikulowa AT1 

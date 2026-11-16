@@ -37,3 +37,23 @@ Progi ustalałem 15.11.2026, przed uruchomieniem każdego testu. Poniżej zapisu
 - Dlaczego dwa warianty: awarie same podnoszą ceny, więc 4a nie odróżnia awarii od wycofania mocy. Prawdziwa awaria trwa dniami; wycofanie mocy mogłoby podążać za ceną z godziny na godzinę, i to mierzy 4b.
 - Wynik: brak sygnału w obu wariantach dla wszystkich grup.
 - Czego test nie widzi: długich, zaplanowanych postojów i cen ofert.
+
+## Test 5: wykorzystanie importu 9–10.11.2026
+
+- Ustalony 16.11.2026 przed liczeniem.
+- Kwadranse krytyczne: 9 i 10 listopada, RCE > 3 000 zł/MWh (19 kwadransów).
+- Wykorzystanie = pozycja netto PL (JAO netPos) / minimalna pozycja netto PL (JAO maxNetPos, maksymalny import).
+- Na limicie przy ≥ 95%. Werdykt: ≥ 80% kwadransów na limicie = import na limicie; ≤ 20% = import nie był ograniczeniem.
+- Pierwszy przebieg policzył 5 z 19 kwadransów (błąd łączenia danych godzinowych z kwadransowymi). Po poprawce: 0 z 19, wykorzystanie 39–51%. Werdykt: import nie był ograniczeniem.
+- Zastrzeżenie dopisane po wyniku: maksymalny import z JAO zakłada dostosowanie wszystkich innych stref pod Polskę, więc jest nieosiągalny. Ta miara była złym wyborem.
+- Część eksploracyjna (po wyniku, bez progu): aktywne ograniczenia sieci w kwadransach krytycznych i pozostałych. Mikułowa PST1: 100% wobec 40%. Ten trop sprawdza test 6.
+
+## Test 6: Mikułowa w godzinach skoków
+
+- Ustalony 16.11.2026 przed liczeniem, po eksploracji z testu 5, na innych dniach.
+- Okno: 1.10.2026 – 8.11.2026 (bez 9 i 10 listopada).
+- Skok: godzina ze średnią RCE > 1 000 zł/MWh.
+- Mikułowa aktywna w godzinie: dowolny element z „Mikulowa” w nazwie ma shadow price > 0 w co najmniej jednym MTU tej godziny (w danych: Mikulowa PST1 i Mikulowa AT1).
+- Sygnał: udział w godzinach skoków ≥ 2× udział w pozostałych godzinach. Pokrycie danymi JAO < 90% = nierozstrzygnięte.
+- Wynik: 49,4% (118 z 239) wobec 7,2% (50 z 698), stosunek 6,9. Pokrycie 92,7%. Sygnał.
+- Kontekst bez progu: ograniczenie importu SwePol 3,8% wobec 6,4% (brak związku w tym oknie), linia Ensdorf–Vigy 10,5% wobec 0,3%.

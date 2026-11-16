@@ -1,0 +1,55 @@
+Test 5 - wykorzystanie importu w najdrozszych kwadransach 9-10.11.2026 (JAO Core + PSE)
+uruchomiono: 2026-11-16 20:32
+
+DANE
+  RCE z cache PSE: 192 kwadransow 9-10.11; krytycznych (> 3000 zl/MWh): 19
+  JAO maxNetPos: 48 rekordow; pola: id, dateTimeUtc, minALBE, minALDE, minAT, minBE, minCZ, minDE, minHR, minHU, minFR, minNL, minPL, minRO, minSI, minSK, minDE_NO2_BigHub, minNL_NO2_NorNed, minDE_DK2_BigHub, minDE_SE4_Baltic, minPL_LT_BigHub, minPL_SE4_SwePol, minRO_BG_VH, minNL_DK1_COBRA, minDE_DK1_VH, maxALBE, maxALDE, maxAT, maxBE, maxCZ, maxDE, maxHR, maxHU, maxFR, maxNL, maxPL, maxRO, maxSI, maxSK, maxDE_NO2_BigHub
+    przyklad: {'id': 38906, 'dateTimeUtc': '2026-11-08T23:00:00Z', 'minALBE': -1000, 'minALDE': -1000, 'minAT': -5780, 'minBE': -10196, 'minCZ': -8373, 'minDE': -26201, 'minHR': -6582, 'minHU': -8514, 'minFR': -13484, 'minNL': -10793, 'minPL': -6949, 'minRO': -4943, 'minSI': -5073, 'minSK': -6925, 'minDE_NO2_BigHub': -1445, 'minNL_NO2_NorNed': -701, 'minDE_DK2_BigHub': -1001, 'minDE_SE4_Baltic': -590, 'minPL_LT_BigHub': -250, 'minPL_SE4_SwePol': -491, 'minRO_BG_VH': -3588, 'minNL_DK1_COBRA': -701, 'minDE_DK1_VH': -3501, 'maxALBE': 1000, 'maxALDE': 1000, 'maxAT': 5770, 'maxBE': 8194, 'maxCZ': 9937, 'maxDE': 24317, 'maxHR': 5502, 'maxHU': 6687, 'maxFR': 7144, 'maxNL': 10450, 'maxPL': 7128, 'maxRO': 2250, 'maxSI': 6907, 'maxSK': 7639, 'maxDE_NO2_BigHub': 1445, 'maxNL_NO2_NorNed': 701, 'maxDE_DK2_BigHub': 986, 'maxDE_SE4_Baltic': 608, 'maxPL_LT_BigHub': 250, 'maxPL_SE4_SwePol': 491, 'maxRO_BG_VH': 3012, 'maxNL_DK1_COBRA': 701, 'maxDE_DK1_VH': 3501}
+  JAO netPos: 192 rekordow; pola: id, dateTimeUtc, hub_ALBE, hub_ALDE, hub_AT, hub_BE, hub_CZ, hub_DE, hub_HR, hub_HU, hub_FR, hub_NL, hub_RO, hub_SI, hub_SK, hub_PL, hub_DE_NO2_BigHub, hub_NL_NO2_NorNed, hub_DE_DK2_BigHub, hub_DE_SE4_Baltic, hub_PL_SE4_SwePol, hub_PL_LT_BigHub, hub_RO_BG_VH, hub_NL_DK1_COBRA, hub_DE_DK1_VH
+    przyklad: {'id': 72487, 'dateTimeUtc': '2026-11-08T23:00:00Z', 'hub_ALBE': -585.9, 'hub_ALDE': 585.9, 'hub_AT': -2050.1, 'hub_BE': 593.4, 'hub_CZ': 2571.8, 'hub_DE': -3130.7, 'hub_HR': -1427.7, 'hub_HU': -1461.6, 'hub_FR': -712.9, 'hub_NL': 5920.1, 'hub_RO': -987.4, 'hub_SI': 476.2, 'hub_SK': 319.1, 'hub_PL': -73.2, 'hub_DE_NO2_BigHub': 1399.2, 'hub_NL_NO2_NorNed': 0.0, 'hub_DE_DK2_BigHub': -600.0, 'hub_DE_SE4_Baltic': -348.0, 'hub_PL_SE4_SwePol': -490.0, 'hub_PL_LT_BigHub': -179.0, 'hub_RO_BG_VH': -1216.3, 'hub_NL_DK1_COBRA': 700.0, 'hub_DE_DK1_VH': 697.1}
+  JAO shadowPrices: 577 rekordow; pola: id, dateTimeUtc, tso, cnecName, cnecEic, direction, contName, branchEic, shadowPrice, ram, ramMcp, imax, fmax, frm, fref, f0core, f0all, fuaf, amr, ltaMargin, cva, iva, ftotalLtn, minRamFactor, maxZ2ZPtdf, hubFrom, hubTo, hub_ALBE, hub_ALDE, hub_AT, hub_BE, hub_CZ, hub_DE, hub_FR, hub_HR, hub_HU, hub_NL, hub_PL, hub_RO, hub_SI
+    przyklad: {'id': 312620, 'dateTimeUtc': '2026-11-08T23:00:00Z', 'tso': 'Amprion', 'cnecName': 'Maasbracht - Oberzier 380 white ', 'cnecEic': '10T-DE-NL-00005N', 'direction': 'DIRECT', 'contName': 'N-1 Maasbracht - Siersdorf SELFK SW/Z', 'branchEic': '10T-DE-NL-00006L', 'shadowPrice': 0.270347871, 'ram': 1409, 'ramMcp': 0.0, 'imax': 2720.0, 'fmax': 1884, 'frm': 188, 'fref': 1271, 'f0core': 287, 'f0all': -29, 'fuaf': 316, 'amr': 0, 'ltaMargin': 0, 'cva': 0, 'iva': 0, 'ftotalLtn': 287, 'minRamFactor': 70.0, 'maxZ2ZPtdf': 0.47516, 'hubFrom': 'BE_AL_HVDC', 'hubTo': 'DE_AL_HVDC', 'hub_ALBE': 0.25968, 'hub_ALDE': -0.21548, 'hub_AT': -0.00074, 'hub_BE': 0.25965, 'hub_CZ': -0.00406, 'hub_DE': -0.02048, 'hub_FR': 0.09838, 'hub_HR': 0.00217, 'hub_HU': -0.00076, 'hub_NL': 0.24158, 'hub_PL': -0.00233, 'hub_RO': -5e-05, 'hub_SI': 0.0027, 'hub_SK': -0.00175, 'hub_RO_BG_VH': -3e-05, 'hub_DE_DK1_VH': 0.01836, 'hub_DE_DK2_BigHub': 0.00533, 'hub_DE_NO2_BigHub': 0.01852, 'hub_DE_SE4_Baltic': 0.01745, 'hub_NL_DK1_COBRA': 0.12613, 'hub_NL_NO2_NorNed': 0.12597, 'hub_PL_LT_BigHub': -0.00216, 'hub_PL_SE4_SwePol': -0.00196}
+  rozpoznane: maxNetPos czas=dateTimeUtc PL=['minPL', 'maxPL']; netPos czas=dateTimeUtc PL=['hub_PL']
+
+TEST 5
+  maxNetPos: 48 wartosci (godzinowe), przypisane do kwadransow wg godziny
+  kwadransow krytycznych z danymi JAO: 19 z 19
+  09.11 15:30  RCE    3134  netto PL    -3189 MW  maks. import    -6807 MW  wykorzystanie  46.8%
+  09.11 15:45  RCE    3309  netto PL    -3467 MW  maks. import    -6807 MW  wykorzystanie  50.9%
+  09.11 16:00  RCE    3193  netto PL    -3448 MW  maks. import    -6870 MW  wykorzystanie  50.2%
+  09.11 16:45  RCE    3006  netto PL    -3310 MW  maks. import    -6870 MW  wykorzystanie  48.2%
+  10.11 12:30  RCE    3107  netto PL    -2679 MW  maks. import    -5630 MW  wykorzystanie  47.6%
+  10.11 12:45  RCE    3149  netto PL    -2666 MW  maks. import    -5630 MW  wykorzystanie  47.4%
+  10.11 13:00  RCE    3003  netto PL    -2456 MW  maks. import    -5493 MW  wykorzystanie  44.7%
+  10.11 13:15  RCE    3154  netto PL    -2512 MW  maks. import    -5493 MW  wykorzystanie  45.7%
+  10.11 13:30  RCE    3173  netto PL    -2608 MW  maks. import    -5493 MW  wykorzystanie  47.5%
+  10.11 13:45  RCE    3314  netto PL    -2574 MW  maks. import    -5493 MW  wykorzystanie  46.9%
+  10.11 14:00  RCE    3593  netto PL    -2329 MW  maks. import    -5321 MW  wykorzystanie  43.8%
+  10.11 14:15  RCE    3692  netto PL    -2178 MW  maks. import    -5321 MW  wykorzystanie  40.9%
+  10.11 14:30  RCE    3714  netto PL    -2098 MW  maks. import    -5321 MW  wykorzystanie  39.4%
+  10.11 14:45  RCE    3646  netto PL    -2155 MW  maks. import    -5321 MW  wykorzystanie  40.5%
+  10.11 15:00  RCE    3572  netto PL    -2069 MW  maks. import    -5225 MW  wykorzystanie  39.6%
+  10.11 15:15  RCE    3573  netto PL    -2052 MW  maks. import    -5225 MW  wykorzystanie  39.3%
+  10.11 15:30  RCE    3572  netto PL    -2022 MW  maks. import    -5225 MW  wykorzystanie  38.7%
+  10.11 15:45  RCE    3572  netto PL    -2184 MW  maks. import    -5225 MW  wykorzystanie  41.8%
+  10.11 16:00  RCE    3262  netto PL    -2688 MW  maks. import    -5501 MW  wykorzystanie  48.9%
+  kwadransow na limicie (>= 95%): 0%
+  WERDYKT: IMPORT NIE BYL OGRANICZENIEM
+
+EKSPLORACYJNIE (dodane po wyniku wersji 001, bez progu): aktywne ograniczenia sieci
+  kwadranse krytyczne: 19, pozostale kwadranse 9-10.11: 173
+  element (cnecName)                         tso         PTDF PL  kryt.   inne   max SP
+  Ensdorf - Vigy VIGY1 N                     Rte          -0.103   100%    40%   1655.5
+  Mikulowa PST1                              Pse          -0.240   100%    40%   1656.6
+  External Constraint PL_SE4_SwePol_import   Pse           0.000    79%    22%   1368.5
+  External Constraint BE_AL_import           Elia          0.000    58%    20%    117.4
+  External Constraint DE_AL_export           Amprion       0.000    37%    17%    204.3
+  External Constraint DE_NO2_BigHub_export   TennetGmbh    0.000     5%    11%     80.4
+  External Constraint NL_DK1_COBRA_export    TennetBv      0.000     5%     1%      4.9
+  PST Gronau TR 441 E                        Amprion      -0.078     5%     3%     23.6
+  220 kV Obersielach - Podlog                Eles         -0.005     0%     1%    838.8
+  Altheim - Sittling 219                     TennetGmbh    0.012     0%     5%    328.9
+  Altheim - Sittling 220                     TennetGmbh    0.021     0%     1%    173.0
+  Diele - Meeden SCHWARZ                     TennetGmbh   -0.031     0%    20%      7.6
+  kryt./inne = odsetek kwadransow, w ktorych element byl aktywnym ograniczeniem; SP = shadow price, EUR/MW
+  SwePol w kwadransach krytycznych: wykorzystanie srednio -43%, na limicie (>=95%) w 0% kwadransow
