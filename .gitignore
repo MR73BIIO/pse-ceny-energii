@@ -1,0 +1,7 @@
+dane_pse/
+.venv/
+__pycache__/
+*.csv
+probka*.html
+log*.txt
+wyniki_lokalne*.txt

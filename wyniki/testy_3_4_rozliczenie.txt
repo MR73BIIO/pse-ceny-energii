@@ -1,0 +1,81 @@
+pse_margines_006 - koszt a cena w skokach; kto pokryl zapotrzebowanie i kto zarobil
+uruchomiono: 2026-11-16 06:56
+okno 2026-10-01..2026-11-14, godzin z cena: 1081, skokow: 310
+sufit kosztowy (gaz szczytowy, spr. 0.38, 0.53 t CO2/MWh): gaz dziennie z pliku gaz_tge_004.csv (45 z 45 dni, braki uzupelnione sasiednim dniem; srednia 399.8 zl/MWh); CO2 dziennie z PSE rcco2; EURPLN NBP sr. 4.3866
+CO2: rcco2 pola liczbowe: rcco2_eur (sr. 87.14), rcco2_pln (sr. 382.30); uzyte rcco2_pln jako zl/t
+sufit w oknie: min 1039, sr. 1255, max 1481 zl/MWh
+
+TEST 3  skoki powyzej sufitu kosztowego
+  skokow powyzej sufitu: 167 z 310 = 53.9% (prog 50%)
+  wszystkich godzin powyzej sufitu: 167 (15.4%)
+  WERDYKT: SKOKI PONAD KOSZT
+  [gaz w godzinach skokow] srednio 421 zl/MWh, min 328, max 483
+
+TEST 4  ubytki mocy duzych grup a skoki cen (godz. 7-21, ubytki elektrowniane)
+  pokrycie godzin danymi o ubytkach: 100.0%
+  grupa               skoki MW  oczek. MW  4a stosunek  4b korelacja  werdykt
+  PGE                     4309       4476         0.96         -0.65  brak sygnalu  (dni z ruchem ubytkow: 45)
+  Tauron                  1273       1405         0.91         -0.09  brak sygnalu  (dni z ruchem ubytkow: 36)
+  Orlen (z Energa)         901       1020         0.88         -0.07  brak sygnalu  (dni z ruchem ubytkow: 45)
+  Enea                    1790       1970         0.91         -0.11  brak sygnalu  (dni z ruchem ubytkow: 24)
+  progi: 4a >= 1.20, 4b >= 0.30
+
+KTO POKRYL ZAPOTRZEBOWANIE (srednio MW: w skokach | poza skokami)
+  zapotrzebowanie KSE                                 21436 |    17945
+  wytworcze JGw1 (centralnie dysp.)                   12741 |    10017
+  wytworcze JGw2                                        378 |      212
+  nieaktywne na RB (m.in. ciepłownie, przemysl)        6589 |     8826
+  wiatr                                                1580 |     3178
+  fotowoltaika                                          883 |     2220
+  magazyny JGm1                                         409 |      103
+  magazyny JGm2                                           6 |        5
+  saldo wymiany (rownolegla, + import?)                1179 |    -1003
+  saldo wymiany (nierownolegla)                         187 |       59
+
+WYMIANA WG KIERUNKU (srednio MW: w skokach | poza skokami)
+  CZ-PL                                                 173 |        6
+  DE-PL                                                1809 |     1188
+  LT-PL                                                 137 |      140
+  PL-CZ                                                -391 |    -1283
+  PL-DE                                                  -7 |     -163
+  PL-LT                                                 -27 |      -25
+  PL-SE                                                 -55 |     -110
+  PL-SK                                                -356 |     -584
+  PL-UA                                                 -94 |     -208
+  SE-PL                                                 187 |      101
+  SK-PL                                                   7 |        0
+  UA-PL                                                  38 |       41
+
+ELEKTROWNIE CENTRALNIE DYSPONOWANE W GODZINACH SKOKOW (gen-jw)
+  wartosc = produkcja x cena spot; nadwyzka = produkcja x (cena - sufit), gdy dodatnia
+  UWAGA: to wartosc po cenie spot, nie przychod - wiekszosc energii jest sprzedana wczesniej
+  w kontraktach terminowych; realnie zarabia na skoku tylko niezabezpieczona czesc.
+  produkcja razem: 1588 GWh
+
+  wlasciciel              GWh  udzial  wartosc mln zl  nadwyzka mln zl
+  PGE                     472   29.7%             710              128
+  Orlen (z Energa)        280   17.6%             421               77
+  Tauron                  278   17.5%             413               72
+  Enea                    231   14.6%             350               67
+  inni/?                  182   11.5%             275               51
+  Tauron+Orlen (spolka wspolna)      107    6.8%             163               30
+  ZE PAK                   36    2.3%              52                7
+
+  elektrownia (top 15)           wlasciciel             GWh  nadwyzka mln zl
+  Jaworzno 2 JWCD                Tauron               204.0             53.2
+  Płock                          Orlen (z Energa)     126.2             33.5
+  EC Stalowa Wola                Tauron+Orlen (spolka wspolna)   107.5             30.2
+  EC Włocławek                   Orlen (z Energa)     104.5             29.9
+  Kozienice 2                    Enea                  93.4             29.0
+  Bełchatów                      PGE                   87.6             22.7
+  Gryfino                        PGE                   75.5             21.4
+  Opole                          PGE                   61.3             16.4
+  Zielona Góra                   PGE                   60.5             15.5
+  Połaniec 2-Pasywna             Enea                  56.3             14.9
+  Kozienice 1                    Enea                  52.1             14.1
+  Turów                          PGE                   51.4             13.1
+  EC Wrotków                     PGE                   50.8             15.1
+  EC Czechnica-2                 inni/?                42.4             10.5
+  MFW Baltic Power               inni/?                41.1             10.2
+
+  nieprzypisane nazwy (do uzupelnienia w OWNERS): Chorzów, EC Czechnica-2, EC Nowa Sarzyna, EC Łódź-4, Karolin 2, Katowice, MFW Baltic Power, Skawina, Wrocław, Zwartowo

@@ -1,0 +1,22 @@
+pse_margines_001 - skoki cen a zapas mocy (API PSE: rce-pln, his-wlk-cal, pk5l-wp)
+uruchomiono: 2026-11-15 15:38
+godzin lacznie: 16776, zakres: 2024-12-31 23:00:00+00:00 .. 2026-11-30 22:00:00+00:00
+wyrownanie planu PK5L: przesuniecie +0 h, korelacja prognozy z wykonaniem 0.828
+
+TEST 1  okno 2026-10-01..2026-11-14, godzin w oknie: 1081
+  godzin z cena: 1081, pokrycie zapasu mocy: 100.0%
+  skokow (> 1000 zl/MWh): 310 (28.7% godzin)
+  [pomocniczo] skoki w N godzinach o najwyzszym obciazeniu resztkowym: 86.1%
+  skoki w N=310 godzinach o najnizszym zapasie: 49.7% (losowo byloby ok. 28.7%; prog 80%)
+  [pierwotny wariant 10%] 19.7% (maksimum mozliwe do osiagniecia: 35.2%)
+  mediana zapasu: w skokach 2058 MW, poza skokami 2828 MW
+  WERDYKT: NIEZALICZONE
+
+TEST 2  godziny z zapasem mocy ponizej 1 GW
+  2025-01-01..2025-11-14: godzin z zapasem < 1000 MW: 103 (pokrycie danych 100.0%)
+  2026-01-01..2026-11-14: godzin z zapasem < 1000 MW: 113 (pokrycie danych 100.0%)
+  WERDYKT: NIE ROSNIE
+
+INFORMACYJNIE  wiatr w oknie 2026-10-01..2026-11-14
+  cena srednia: 878 zl/MWh, cena uchwycona przez wiatr: 732 zl/MWh (83% sredniej)
+  srednia generacja wiatru: w skokach 1580 MW, poza skokami 3178 MW
